@@ -4,30 +4,29 @@
         <!-- Cigarette Butts -->
         <section class="section">
             <div class="columns">
-                <div class="column is-one-third is-offset-1" style="text-align: center;">
+                <div class="column is-one-third is-offset-1" style="text-align: center; margin-top: 5em;">
                     <img src="/assets/butts.jpg" />
                 </div>
 
                 <div class="column cig-2">
-                    <h2 id="butts1txt" class="title is-2" style="color: red; text-align: center;">
+                    <h2 id="butts1txt" class="title is-2" style="text-align: center;">
                         <strong>{{ $t('home.about.about2') }}</strong>
                     </h2>
                 </div>
             </div>
-            <br>
-            <br>
-            <div class="columns">
-                <div class="column is-one-third is-offset-1">
-                    <h1 class="title is-1" style="text-align: center;"><strong>{{ $t('home.about.about3') }}</strong></h1>
-                    <br>
-                    <h1 class="subtitle is-3">{{ $t('home.about.about4') }}</h1>
-                    <br>
-                    <h1 class="subtitle is-3">{{ $t('home.about.about5') }}</h1>
-                    <br>
-                    <p class="subtitle is-3">{{ $t('home.about.about6') }}</p>
-                </div>
 
-                <div class="column is-offset-1" style="text-align: center; padding-right: 5em;">
+            <div class="columns">
+                <div class="column is-one-third">
+                    <h1 class="title is-1" style="text-align: center; margin-top: -1em;"><strong>{{ $t('home.about.about3') }}</strong></h1>
+                    <br>
+                    <h1 style="text-align: center;" class="subtitle is-3">{{ $t('home.about.about4') }}</h1>
+                    <br>
+                    <h1 style="text-align: center;" class="subtitle is-3">{{ $t('home.about.about5') }}</h1>
+                    <br>
+                    <p style="text-align: center;" class="subtitle is-3">{{ $t('home.about.about6') }}</p>
+                </div>
+                
+                <div class="column is-offset-1" style="text-align: center;">
                     <img src="/assets/cigbutts_jar.jpg" style="height: 600px;">
                 </div>
             </div>
@@ -92,9 +91,9 @@
         <section>
             <div class="columns" style="padding-top: 4em; padding-bottom: 4em;">
                 <div class="column is-one-third is-offset-1" style="padding-left: 2em; margin:auto;">
-                    <h1 class="title is-2" style="text-align: center;"><strong style="color: red;">{{ $t('home.about.about10') }}</strong></h1>
+                    <h1 class="title is-2" style="text-align: center;"><strong style="color: yellow;">{{ $t('home.about.about10') }}</strong></h1>
                     <br>
-                    <h1 class="title is-2" style="text-align: center;"><strong style="color: red;">{{ $t('home.about.about11') }}</strong></h1>
+                    <h1 class="title is-2" style="text-align: center;"><strong style="color: yellow;">{{ $t('home.about.about11') }}</strong></h1>
                 </div>
 
                 <div class="column is-one-third is-offset-1" style="padding-top: 4em; padding-bottom: 4em; margin:auto;">
