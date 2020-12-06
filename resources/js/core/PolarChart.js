@@ -28,6 +28,6 @@ export default PolarArea.extend({
     // this.chartData is created in the mixin
     // you can pass renderChart data and options objects
     // data: { labels: [], datasets: { label: '', backgroundColor: '', data: []}}
-    this.renderChart(this.chartData, this.options)
+    this.renderChart(this.chartData, this.options);
   }
-})
+});

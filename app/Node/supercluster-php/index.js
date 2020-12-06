@@ -21,6 +21,6 @@ index.load(features);
 const bbox = [-180, -85, 180, 85];
 let clusters = index.getClusters(bbox, zoom);
 
-fs.writeFile(prefix + '/storage/app/data/clusters.json', JSON.stringify(clusters), function (err, data) {
+fs.writeFile(prefix + '/storage/app/data/clusters.json', JSON.stringify(clusters), (err, data) => {
     if (err) return console.log(err);
 });
