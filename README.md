@@ -16,23 +16,29 @@
 <p>STAY TUNED FOR LOTS OF EXCITING UPDATES</p>
 <hr>
 <p>OpenLitterMap-web is built with <a href="https://laravel.com">Laravel</a>, <a href="http://vuejs.org/">Vue.js</a> and <a href="https://bulma.io">Bulma</a></p>
-<p>To install this project locally on your machine, download and install <a href="https://laravel.com/docs/5.8/homestead">Homestead</a></p>
-<p>First, download <a href="https://www.virtualbox.org/wiki/Downloads">Virtual box</a> which will give you a Virtual Machine. This is used to give us all the same development environment. Alternatively, if you use mac, you can use <a href="https://laravel.com/docs/5.8/valet">Laravel Valet</a></p>
-<p>Second, you are going to need to download <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> which you will use to provision, turn on and shut down your VM.</p>
-<p>In your root directory, add the vagrant box with</p>  
+<p>1. Download <a href="https://www.virtualbox.org/wiki/Downloads">Virtual box</a> which will give you a Virtual Machine. This is used to give us all the same development environment. Alternatively, if you use mac, you can use <a href="https://laravel.com/docs/5.8/valet">Laravel Valet</a></p>
+<p>2. you are going to need to download <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> which you will use to provision, turn on and shut down your VM.</p>
+<p>3. Go to your command prompt or terminal and in your user root directory (C:/Users/You) run</p>  
 
 `vagrant box add laravel/homestead`
 
-<p>then clone the box with</p> 
+<p>4. Clone the box by running</p> 
 
 `git clone https://github.com/laravel/homestead.git ~/Homestead`
 
-<p>You should now have a "Homestead" folder on your machine at </p> 
+<p>You should now have a "Homestead" folder on your machine at C:/Users/You/~/Homestead</p>
 
-`~/Users/You/Homestead`
+<p>5. Cd into the Homestead directory and run the command below in terminal/command prompt. This will create a Homestead.yaml file in the homestead directory.</p>
 
-<p>Before turning on the VM, we are going to set up the Homestead.yaml file. Every time you save a file, Homestead.yaml will mirror your local code and copy it to the VM which your web-server (VM) will interact with.</p>
-<p>Open the Homestead.yaml file, add a new site and create a database.</p>
+Mac and Linux
+
+`bash init.sh`
+
+Windows
+
+`init.bat`
+
+<p>6. Open the Homestead.yaml file and update it to match the sample below</p>
 
 ```
 ---
@@ -60,17 +66,17 @@ databases:
 ...
 ```
 
-<p>Next, update your hosts file (sudo nano /etc/hosts) and include:</p>
+<p>7. update your hosts file (located at /etc/hosts on mac/linux and C:\Windows\System32\drivers\etc\hosts on windows) and include:</p>
 
 `192.168.10.10 olm.test`
 
-<p>When you want to boot up the VM, cd into the Homestead folder and run</p>
+<p>8. When you want to boot up the VM, cd into the Homestead folder and run</p>
 
 `vagrant up`
 
-<p>Download the repo and save it locally into your "Code" folder</p> 
+<p>9. Download the repo and save it locally into your "Code" folder</p> 
 
-`~/Users/You/Code/openlittermap-web`
+`C:/Users/You/Code/openlittermap-web`
 
 <p>If this is your first time installing, you need to run</p>
 
