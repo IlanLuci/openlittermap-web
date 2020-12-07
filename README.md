@@ -16,8 +16,8 @@
 <p>STAY TUNED FOR LOTS OF EXCITING UPDATES</p>
 <hr>
 <p>OpenLitterMap-web is built with <a href="https://laravel.com">Laravel</a>, <a href="http://vuejs.org/">Vue.js</a> and <a href="https://bulma.io">Bulma</a></p>
-<p>1. Download <a href="https://www.virtualbox.org/wiki/Downloads">Virtual box</a> which will give you a Virtual Machine. This is used to give us all the same development environment. Alternatively, if you use mac, you can use <a href="https://laravel.com/docs/5.8/valet">Laravel Valet</a></p>
-<p>2. you are going to need to download <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> which you will use to provision, turn on and shut down your VM.</p>
+<p>1. Download and install <a href="https://www.virtualbox.org/wiki/Downloads">Virtual box</a> which will give you a Virtual Machine. This is used to give us all the same development environment. Alternatively, if you use mac, you can use <a href="https://laravel.com/docs/5.8/valet">Laravel Valet</a></p>
+<p>2. Download and install <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> which you will use to provision, turn on and shut down your VM.</p>
 <p>3. Go to your command prompt or terminal and in your user root directory (C:/Users/You) run</p>  
 
 `vagrant box add laravel/homestead`
@@ -59,6 +59,7 @@ folders:
 sites:
     - map: olm.test
       to: /home/vagrant/Code/openlittermap-web/public
+      php: "7.3"
 
 databases:
     - olm
@@ -70,25 +71,42 @@ databases:
 
 `192.168.10.10 olm.test`
 
-<p>8. When you want to boot up the VM, cd into the Homestead folder and run</p>
-
-`vagrant up`
-
-<p>9. Download the repo and save it locally into your "Code" folder</p> 
+<p>8. Download the repo and save it locally into your "Code" folder</p> 
 
 `C:/Users/You/Code/openlittermap-web`
 
-<p>If this is your first time installing, you need to run</p>
+<p>9. When you want to boot up the VM, cd into the Homestead folder and run</p>
+
+`vagrant up`
+
+<p>9.1 If this is your first time installing, you need to run</p>
 
 `vagrant provision` 
 
-<p>You should now be able to open the browser and visit</p> 
+<p>10. Install npm dependencies by running the command below in C:/Users/You/Code/openlittermap-web</p>
 
-`olm.test`
+`npm install`
 
-<p>You also need to install composer and npm dependencies.</p>
-<p>Locally, run "npm install"</p>
-<p>SSH into the VM with "vagrant ssh". cd into Code/olm, and then run "composer install"</p>
+<p>11. SSH into the VM by running</p>
+
+`vagrant ssh`
+
+<p>12. To install composer run</p>
+
+`composer install`
+
+<p>13. Open the .env file in C:/Users/You/Code/openlittermap-web</p>
+
+<p>13.1 Add</p>
+
+`WEBSOCKET_BROADCAST_HOST=192.168.10.10`
+
+<p>13.2 Go to https://dashboard.pusher.com/accounts/sign_up and sign up for an account. Now go to account/api key and click create key. Copy this key and head back over to the .env file</p>
+
+<p>13.3. Update your PUSHER_APP_SECRET to read PUSHER_APP_SECRET=[your api key]</p>
+
+<p>You should now be able to open the browser and visit old.test</p>
+
 <p>You can migrate the tables with "php artisan migrate"</p>
 <p>If you would like to contribute something, make a new branch locally "git checkout -b feature/my-new-feature". We would love to see your pull requests!</p>
 
